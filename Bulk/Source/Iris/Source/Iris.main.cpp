@@ -10,11 +10,14 @@
 
 #include <assert.h>
 
+
 #include <QApplication>
 #include <QDir>
 #include <QDesktopWidget>
 #include <QFontDatabase>
 #include <QWidget>
+#include <QGamepad>
+#include <QElapsedTimer>
 
 #include <ULIS_CORE>
 
@@ -25,6 +28,19 @@
 int main( int argc, char *argv[] )
 {
     QApplication app( argc, argv );
+
+    // Load gamepad workaround
+    {
+        QElapsedTimer timer = QElapsedTimer();
+        timer.start();
+        do
+        {
+            app.processEvents();
+            if( timer.elapsed() > 4000 )
+                break;
+        }
+        while( QGamepadManager::instance()->connectedGamepads().isEmpty() ); 
+    }
 
     // Global Data Initialisation
     {

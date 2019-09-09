@@ -18,7 +18,6 @@
 #include "Iris.Utils.CustomProperties.h"
 
 
-namespace  nWindow { class SGraph; }
 namespace  Rivet { class TabArea; }
 class QStackedWidget;
 

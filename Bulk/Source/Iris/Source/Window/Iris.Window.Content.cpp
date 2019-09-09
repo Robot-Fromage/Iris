@@ -23,6 +23,7 @@
 
 #include "Iris.Utils.Settings.h"
 #include "Iris.Window.Graph.h"
+#include "Iris.Window.Viewport3D.h"
 
 
 namespace  nWindow {
@@ -72,7 +73,7 @@ SContent::Init()
     mTabArea = new  ::Rivet::TabArea( this );
     mStack = new QStackedWidget( this );
     mWidget2D = new  SGraph();
-    mWidget3D = new  QTextEdit();
+    mWidget3D = new  SCanvas();
 
 }
 
