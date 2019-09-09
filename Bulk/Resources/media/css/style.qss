@@ -1,0 +1,180 @@
+/*
+////////////////////////////////////////////////////////
+/////////////////////////////////////////////  ScrollBar
+*/
+
+
+QScrollBar:horizontal {
+    border: 1px solid rgb(40,40,40);
+    background: rgb(10,10,10);
+    height: 15px;
+    margin: 0px 22px 0 22px;
+	padding:1px;
+	
+	margin-bottom:1px;
+}
+
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+QScrollBar::handle:horizontal {
+    background: rgb(40,40,40);
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+	background: rgb(60,60,60);
+}
+
+
+QScrollBar::add-line:horizontal {
+	image:url(Resources/media/css/img/arrowRight.png);
+	background:transparent;
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:horizontal:hover {
+	image:url(Resources/media/css/img/arrowRightHover.png);
+}
+
+QScrollBar::sub-line:horizontal {
+	image:url(Resources/media/css/img/arrowLeft.png);
+	background:transparent;
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal:hover {
+	image:url(Resources/media/css/img/arrowLeftHover.png);
+}
+
+
+QScrollBar:vertical {
+    border: 1px solid rgb(40,40,40);
+    background: rgb(10,10,10);
+    width: 15px;
+    margin: 22px 0 22px 0;
+	padding:1px;
+	
+	margin-right:1px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar::handle:vertical {
+	background: rgb(40,40,40);
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background: rgb(60,60,60);
+}
+
+QScrollBar::add-line:vertical {
+	image:url(Resources/media/css/img/arrowDown.png);
+	background:transparent;
+    height: 20px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover {
+	image:url(Resources/media/css/img/arrowDownHover.png);
+}
+
+QScrollBar::sub-line:vertical {
+	image:url(Resources/media/css/img/arrowUp.png);
+	background:transparent;
+    height: 20px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover {
+	image:url(Resources/media/css/img/arrowUpHover.png);
+}
+
+
+/*
+////////////////////////////////////////////////////////
+/////////////////////////////////////////  QGraphics****
+*/
+
+
+QGraphicsView
+{
+    background: black;
+    border: none;
+}
+
+
+QGraphicsScene
+{
+    background: black;
+    border: none;
+}
+
+
+/*
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////// Window
+*/
+
+
+#SMainWindow
+{
+    qproperty-CustomCaptionHeight: 30;
+    min-width: 400;
+    min-height: 200;
+}
+
+
+#SMainCaption
+{
+    qproperty-BackgroundGradientStart: rgb( 20, 20, 20 );
+    qproperty-BackgroundGradientStop: rgb( 60, 60, 60 );
+    qproperty-BorderColor: rgb( 15, 15, 15 );
+    qproperty-OutlineColor: rgb( 60, 60, 60 );
+    qproperty-ButtonShapeSize: 9;
+    qproperty-ButtonColor: rgb( 220, 220, 220 );
+    qproperty-ButtonHoveredBackgroundColor: rgba( 255, 255, 255, 60 );
+    qproperty-CloseButtonHoveredBackgroundColor: rgb( 110, 45, 27 );
+    qproperty-ButtonPressedBackgroundColor: rgba( 0, 0, 0, 60 );
+    qproperty-CloseButtonPressedBackgroundColor: rgb( 54, 17, 6 );
+}
+
+
+#SMainContent
+{
+    qproperty-BackgroundColor: rgb( 35, 35, 35 );
+    qproperty-BorderBackground: rgb( 60, 60, 60 );
+    qproperty-BorderOutline: rgb( 15, 15, 15 );
+    qproperty-BorderSize: 7;
+}
+
+
+/*
+////////////////////////////////////////////////////////
+///////////////////////////////////////////// Log Button
+*/
+
+QPushButton#capButton {
+    background: transparent;
+    border: none;
+}
+
+QPushButton#capButton:hover {
+    background: transparent;
+    border: none;
+}
+
+QPushButton#capButton:pressed {
+    background: transparent;
+    border: none;
+}
