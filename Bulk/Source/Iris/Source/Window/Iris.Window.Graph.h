@@ -3,7 +3,7 @@
 *   Iris
 *__________________
 *
-* Iris.Window.Content.h
+* Iris.Window.Graph.h
 *
 * Clement Berthaud - Layl
 * Please refer to LICENSE.TXT
@@ -12,31 +12,28 @@
 #pragma once
 
 
+
 #include <QWidget>
 
 
-#include "Iris.Utils.CustomProperties.h"
+namespace nWindow { class SGraphView; }
+namespace nWindow { class SGraphScene; }
 
 
-namespace  nWindow { class SGraph; }
-namespace  Rivet { class TabArea; }
-class QStackedWidget;
-
-namespace  nWindow {
+namespace nWindow {
 
 
-class SContent :
-    public QWidget
+class SGraph : public QWidget
 {
     Q_OBJECT
 
-    typedef QWidget         tSuperClass;
-    typedef SContent        tSelf;
+    typedef  QWidget    tSuperClass;
+    typedef  SGraph      tSelf;
 
 public:
     // Construction / Destruction
-    virtual  ~SContent();
-    SContent( QWidget*  parent = NULL );
+    virtual  ~SGraph();
+    SGraph( QWidget* iParent = NULL );
 
 protected:
     // Event
@@ -51,12 +48,10 @@ private:
 
 private:
     // Private Data Members
-    ::Rivet::TabArea* mTabArea;
-    QStackedWidget* mStack;
-    QWidget* mWidget2D;
-    QWidget* mWidget3D;
+    SGraphView*     mView;
+    SGraphScene*    mScene;
+
 };
 
 
 } // namespace  nWindow
-

@@ -22,6 +22,7 @@
 #include <RivetDockingCallbackLibrary>
 
 #include "Iris.Utils.Settings.h"
+#include "Iris.Window.Graph.h"
 
 
 namespace  nWindow {
@@ -70,7 +71,7 @@ SContent::Init()
 {
     mTabArea = new  ::Rivet::TabArea( this );
     mStack = new QStackedWidget( this );
-    mWidget2D = new  QTextEdit();
+    mWidget2D = new  SGraph();
     mWidget3D = new  QTextEdit();
 
 }
@@ -100,6 +101,7 @@ SContent::Build()
 
     mTabArea->ManualAddNewTab( tab2D );
     mTabArea->ManualAddNewTab( tab3D );
+    mTabArea->SetCurrentTab( tab2D );
 }
 
 
